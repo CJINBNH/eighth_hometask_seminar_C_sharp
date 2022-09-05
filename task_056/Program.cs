@@ -35,15 +35,15 @@ for (int i = 0; i < array.GetLength(0); i++)
     {
         sum = sum + array[i, j];
     }
-    if (sum < minSum)
+    if (minSum > sum)
     {
         minSum = sum;
-        minRow++;
+        minRow = i;
     }
     Console.Write($"Сумма чисел {i + 1} строки массива равна: {sum}");
     Console.WriteLine();
 }
-Console.WriteLine($"Строка с наименьшей суммой элементов {minRow}");
+Console.WriteLine($"Строка с наименьшей суммой элементов {minRow + 1}");
 
 // Решение с помощью метода из сети
 
